@@ -36,7 +36,7 @@ check_system_requirements() {
     # Verificar memória RAM
     local total_mem=$(free -g | awk 'NR==2 {print $2}')
     if [ $total_mem -lt 2 ]; then
-        echo -e "${RED}❌ Erro: Memória RAM insuficiente. Mínimo requerido: 2GB${NC}"
+        echo -e "${RED}❌ Erro: Memória RAM insuficiente. Mínimo requerido: 512MB${NC}"
         return 1
     fi
     
